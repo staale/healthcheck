@@ -588,6 +588,7 @@ public class HealthCheckRegistryImpl implements HealthCheckRegistry {
             dto.axes.activated = new TreeSet<>(dto.axes.activated);
             dto.axes.activated.add(Axis.SYS_STALE);
         }
+        dto.runStatus.ok = result.isOk();
         dto.runStatus.slow = result.isSlow();
         dto.runStatus.crashed = result.isCrashed();
 

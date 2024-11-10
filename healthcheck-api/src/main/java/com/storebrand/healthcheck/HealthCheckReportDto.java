@@ -141,6 +141,11 @@ public class HealthCheckReportDto {
          * Or is there something in the check that is hanging?
          */
         public boolean stale;
+        /**
+         * If this run did not activate any axes, and none of the other flags are set, then this is set to true. This
+         * indicates that the check ran successfully, and did not find any issues.
+         */
+        public boolean ok;
     }
 
     /**
